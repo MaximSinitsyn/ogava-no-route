@@ -1,0 +1,20 @@
+{% include 'components/header.twig' %}
+{% include 'components/offer.twig' %}
+{% include 'components/banners.twig' with {"__scope":banners} %}
+<div class='row'>
+    <div class='col xs-8 xs-l-2'>
+        {{ __root.page_text | raw }}
+    </div>
+</div>
+{% include 'components/banners.twig' with {"__scope":banners_2} %}
+{% include 'components/advantages.twig' with {"__scope":advantages} %}
+{% include 'components/invitation.twig' with {"__scope":invitation} %}
+{% include 'components/photos.twig' with {"__scope":photos} %}
+<div class='row'>
+    <div class='col xs-10 xs-l-1'>
+        <div class='base-text'>
+            {{ __root.page_text_2 | raw }}
+        </div>
+    </div>
+</div>
+{% include 'components/footer.twig' with {"__scope":footer} %}

@@ -1,0 +1,38 @@
+.burger-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &__line,
+    &::before,
+    &::after {
+        height: 4px;
+        width: 100%;
+        background: $white;
+    }
+
+    &_assertive &__line,
+    &_assertive::before,
+    &_assertive::after {
+        height: 4px;
+        width: 100%;
+        background: $assertive;
+    }
+}

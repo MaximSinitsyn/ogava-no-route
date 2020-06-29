@@ -1,0 +1,16 @@
+{
+    "offer_image": {
+      "data": {
+        "base": "/images/",
+        "file": "offer.png",
+        "alt": "Салон красоты Симада"
+      }
+    },
+    "offer_button": {
+      "data": {
+        "path": "/icon/",
+        "file": "gift.svg",
+        "caption": "Акции и Скидки"
+      }
+    }
+}

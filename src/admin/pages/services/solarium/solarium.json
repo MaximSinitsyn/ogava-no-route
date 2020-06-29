@@ -1,0 +1,96 @@
+{
+    "__root": {
+        "page_title": {
+            "data": "Солярий",
+            "type": "text"
+        },
+        "title": {
+            "data": "<span class='headline__main'>Салон красоты</span> <span class='headline__sub'>в Митино</span>",
+            "type": "text"
+        }
+    },
+    "__modules": {
+        "offer_services": {
+            "image": {
+                "data": {
+                  "base": "/images/",
+                  "file": "sacura.png",
+                  "alt": "Сакура"
+                }
+            },
+            "title": {
+                "data": "<span class='offer-services__title-text offer-services__title-text_red'>Солярий</span>"
+            },
+            "description": {
+                "data": "Остров красоты «Симада» предлагает широкий ассортимент услуг для всей семьи. Для нас имеет значение мнение каждого клиента и собственная репутация, поэтому мы стремимся всегда поддерживать качество услуг на самом высоком уровне!"
+            },
+            "btn": {
+                "data": {
+                    "name": "Записаться",
+                    "link": "#"
+                }
+            }
+        },
+        "offer": {
+            "json": "modules/offer.json"
+        },
+        "footer": {
+            "json": "modules/footer.json"
+        },
+        "tables": [
+            {
+                "title": {
+                    "data": "УСЛУГИ  СОЛЯРИЯ"
+                },
+                "align": "between",
+                "rows": {
+                    "data": [
+                        {
+                            "cols": [
+                                "Наименование",
+                                "цена, руб"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Солярий 1мин.",
+                                "20"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Солярий от 100 мин",
+                                "18"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Шапочка",
+                                "20"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Стикини",
+                                "20"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Тапочки",
+                                "20"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Крем",
+                                "200"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]                
+    },
+    "__scripts": []
+}

@@ -1,0 +1,66 @@
+{
+    "time_work": {
+        "data": "<p>с 10:00 до 22:00</p><p>без выходных</p>"
+    },
+    "phone": {
+        "data": {
+            "title": "Запишитесь по телефону",
+            "number": "7 (495) 759-66-66"
+        }
+    },
+    "title_1": {
+        "data": "Услуги"
+    },
+    "title_2": {
+        "data": "Информация"
+    },
+    "items_1": {
+        "data": {
+            "our_service": {
+                "name": "Наши услуги",
+                "link": "/services"  
+            },
+            "our_master": {
+                "name": "Наши мастера",
+                "link": "#"  
+            },
+            "certificate": {
+                "name": "Подарочный сертификат",
+                "link": "#"  
+            },
+            "discounts": {
+                "name": "Акции и скидки",
+                "link": "#"  
+            }
+        }
+    },
+    "items_2": {
+        "data": {
+            "vacancies": {
+                "name": "Вакансии",
+                "link": "#"  
+            },
+            "company": {
+                "name": "О компании",
+                "link": "#"  
+            },
+            "contacts": {
+                "name": "Контакты",
+                "link": "#"  
+            }
+        }
+    },
+    "image_inst": {
+        "data": {
+            "base": "/images/",
+            "file": "instagram_logo.png",
+            "alt": "Остров красоты Симада"
+        }
+    },
+    "btn": {
+        "data": {
+            "name": "Записаться",
+            "link": "#" 
+        }
+    }
+}

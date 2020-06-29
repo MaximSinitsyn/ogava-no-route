@@ -1,0 +1,112 @@
+{
+    "__root": {
+        "page_title": {
+            "data": "Визаж",
+            "type": "text"
+        },
+        "title": {
+            "data": "<span class='headline__main'>Салон красоты</span> <span class='headline__sub'>в Митино</span>",
+            "type": "text"
+        }
+    },
+    "__modules": {
+        "offer_services": {
+            "image": {
+                "data": {
+                  "base": "/images/",
+                  "file": "sacura.png",
+                  "alt": "Сакура"
+                }
+            },
+            "title": {
+                "data": "<span class='offer-services__title-text offer-services__title-text_red'>Визаж</span>"
+            },
+            "description": {
+                "data": "Остров красоты «Симада» предлагает широкий ассортимент услуг для всей семьи. Для нас имеет значение мнение каждого клиента и собственная репутация, поэтому мы стремимся всегда поддерживать качество услуг на самом высоком уровне!"
+            },
+            "btn": {
+                "data": {
+                    "name": "Записаться",
+                    "link": "#"
+                }
+            }
+        },
+        "offer": {
+            "json": "modules/offer.json"
+        },
+        "footer": {
+            "json": "modules/footer.json"
+        },
+        "tables": [
+            {
+                "title": {
+                    "data": "Макияж"
+                },
+                "align": "between",
+                "rows": {
+                    "data": [
+                        {
+                            "cols": [
+                                "Наименование",
+                                "цена, руб"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Макияж  дневной",
+                                "2000"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Макияж  вечерний",
+                                "2500"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Макияж свадебный",
+                                "3500"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "title": {
+                    "data": "Перманент"
+                },
+                "align": "between",
+                "rows": {
+                    "data": [
+                        {
+                            "cols": [
+                                "Наименование",
+                                "цена, руб"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Перманент губ",
+                                "8000"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Перманент век",
+                                "8000"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Перманент бровей",
+                                "8000"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]                
+    },
+    "__scripts": []
+}

@@ -1,0 +1,84 @@
+{% set style_between = '' %}
+{% set style_light = '' %}
+{% set style_assertive = '' %}
+{% set style_gray_brown = '' %}
+{% if __variables == 'template' %}
+{% set style_between = 'header__menu_between' %}
+{% set style_light = 'header__burger_light' %}
+{% set style_assertive = 'burger-icon_assertive' %}
+{% set style_gray_brown = 'header__burger-text_gray-brown' %}
+{% endif %}
+<div class='row header'>
+    <div class='row header__container '>
+        <div class='col xs-6 header__left'>
+            <a class='header__logo' href='/'>
+                {% include 'components/logo.twig' %}
+            </a>
+            <div class='header__slogan'>
+                {{ __super.slogan | raw }}
+            </div>
+        </div>
+        <div class='col xs-6 header__right'>
+            <div class='header__location'>
+                <div class='header__location-item'>
+                    <span class='header__address'>
+                        {{ __super.contacts.adress }}
+                    </span>
+                </div>
+                <!--div class='header__location-item'>
+                    <a class='header__link header__link_slim' href='#'>
+                        {{ __super.contacts.location }}
+                    </a>
+                </div-->
+            </div>
+            <div class='header__phone'>
+                {% for item in __super.phones %}
+                    <a class='header__link' href='tel://{{item.number}}'>
+                        {{ item.number }}
+                    </a>
+                {% endfor %}
+            </div>
+            {% if __variables == "template" %}
+                <button class='header__btn'>
+                    <a class='header__btn-link btn' href='#'>
+                        Записаться
+                    </a>
+                </button>
+            {% else %}
+                <button class='header__burger'>
+                    <div class='burger-icon'>
+                        <div class='burger-icon__line'></div>
+                    </div>
+                    <div class='header__burger-text'>
+                        Меню
+                    </div>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+    <div class='row header__menu {{ style_between }}'>
+        {% if __variables == "template" %}
+            <div class='row'>
+                <div class='col xs-12'>
+                    <div class='header__menu-container'>
+                        <div class='header__menu-inner header__menu-inner_wide'>
+                            {% include 'modules/menu.twig' with {"__scope": __super.servicesMenu} %}
+                        </div>
+                        <button class='header__burger {{ style_light }}'>
+                            <div class='burger-icon  {{ style_assertive }}'>
+                                <div class='burger-icon__line'></div>
+                            </div>
+                            <div class='header__burger-text {{ style_gray_brown }}'>
+                                Меню
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class='header__menu-inner col xs-6'>
+                {% include 'modules/menu.twig' with {"__scope": __super.servicesMenu} %}
+            </div>
+        {% endif %}
+    </div>
+</div>

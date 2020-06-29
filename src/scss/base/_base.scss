@@ -1,0 +1,89 @@
+/// Базовые стили приложения
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    line-height: 21px;
+    // font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+.article {
+    p, ul {
+        @include responsive (( fonts: small ));
+
+        color: $dark-brown;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+
+    li {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            top: 7px;
+            content: "";
+            background: #d3031d;
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 0;
+        }
+    }
+}
+
+.p {
+    @include responsive (( fonts: small ));
+
+    color: $dark-brown;
+    font-weight: 300;
+
+    &_free {
+        line-height: $offset_m;
+    }
+
+    &_justify {
+        text-align: justify;
+    }
+}
+
+.logo {
+    max-height: $offset_m;
+}
+
+.base-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.base-text>p {
+    padding: $offset_s 0;
+}
+

@@ -1,0 +1,8 @@
+{#
+    Использование логотипа
+    {%  include 'components/logo.twig' %}
+#}
+
+{% if  __variable == undefined %}
+    <img class='logo' src='/icon/logo.svg'>
+{% endif %}

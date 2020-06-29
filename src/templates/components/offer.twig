@@ -1,0 +1,41 @@
+<div class='row offer'>
+    <div class='offer__content'>
+        <div class='row'>
+            <div class='col xs-12'>
+                <div class='offer__title'>
+                    <h1 class='headline headline_overlay headline_h1'>
+                        {{ __root.title | raw }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col xs-8 xs-center'>
+                <button class='offer__btn btn btn_big btn_icon'>
+                    <img class='btn__icon' src='{{ offer.offer_button.path }}{{ offer.offer_button.file }}'>
+                    <span class='btn__caption-wrapper'>
+                        <span class='btn__caption'>
+                            {{ offer.offer_button.caption }}
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col xs-8 xs-center'>
+                <div class='offer__sale'>
+                    {{ __root.sale | raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='offer__container'>
+        <div class='rectangle-image rectangle-image_banner-big'>
+            <div class='rectangle-image__border rectangle-image__border_top'></div>
+            <div class='rectangle-image__border rectangle-image__border_right'></div>
+            <div class='rectangle-image__border rectangle-image__border_left'></div>
+            <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_bottom'></div>
+            {% include "utils/image.twig" with { "__scope": offer.offer_image, "__class": "rectangle-image__picture" } %}
+        </div>
+    </div>
+</div>

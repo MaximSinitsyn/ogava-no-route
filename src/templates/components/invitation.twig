@@ -1,0 +1,31 @@
+<div class='row'>
+    <div class='invitation'>
+        <div class='col xs-7'>
+            <div class='invitation__container'>
+                <div class='rectangle-image invitation__rectangle'>
+                    <div class='invitation__content'>
+                        <div class='invitation__title'>
+                            {{ invitation.title }}
+                        </div>
+                        <div class='invitation__description'>
+                            {{ invitation.description }}
+                        </div>
+                        <a class='invitation__btn btn btn_light btn_big' href='{{ invitation.btn.link }}'>
+                            {{ invitation.btn.name }}
+                        </a>
+                    </div>
+                    <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_light rectangle-image__border_top'></div>
+                    <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_small-w rectangle-image__border_light rectangle-image__border_right'></div>
+                    <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_small-w rectangle-image__border_light rectangle-image__border_left'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_light rectangle-image__border_overlay rectangle-image__border_bottom'></div>
+                    {% include "utils/image.twig" with { "__scope": invitation.image , "__class": "invitation__image" } %}
+                </div>
+            </div>
+        </div>
+        <div class='col xs-5'>
+            <div class='invitation__text'>
+                {{ __root.page_text_2 | raw }}
+            </div>
+        </div>
+    </div>
+</div>

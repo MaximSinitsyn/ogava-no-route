@@ -1,0 +1,114 @@
+
+/// Базовая величина тени
+$shadow-s: 3px;
+
+/// Базовые размеры приложения, используется для построения отступов
+$size: 21px;
+
+$size_s: 9px;
+$size_m: 18px;
+$size_l: 33px;
+$size_h: 54px;
+$size_g: 72px;
+
+$offset_xs: calc(21px / 2);
+$offset_s: 21px;
+$offset_m: 42px;
+$offset_l: 63px;
+$offset_h: 84px;
+
+
+$breakpoints: (
+    xs: 'min-width: 0px',
+    sm: 'min-width: 0px',
+    md: 'min-width: 0px',
+    lg: 'min-width: 0px',
+    hg: 'min-width: 0px'
+);
+
+/* xs: 'max-width: 420px',
+    sm: 'min-width: 421px',
+    md: 'min-width: 769px',
+    lg: 'min-width: 961px',
+    hg: 'min-width: 1201px' */
+
+$max-width: 1240px;
+
+$_base_path: '../images/';
+
+$variables: (
+    fonts: (
+        xx-small: (
+            hg: (
+                font-size: 12px,
+                line-height: 14px
+            )
+        ),
+        x-small: (
+            hg: (
+                font-size: 14px,
+                line-height: 21px
+            )
+        ),
+        small: (
+            hg: (
+                font-size: 16px,
+                line-height: 21px
+            )
+        ),
+        medium: (
+            hg: (
+                font-size: 18px,
+                line-height: 21px
+            )
+        ),
+        x-medium: (
+            hg: (
+                font-size: 21px,
+                line-height: 21px
+            )
+        ),
+        large: (
+            hg: (
+                font-size: 28px,
+                line-height: 42px
+            )
+        ),
+        x-large: (
+            hg: (
+                font-size: 34px,
+                line-height: 42px
+            )
+        ),
+        xx-large: (
+            hg: (
+                font-size: 42px,
+                line-height: 42px
+            )
+        ),
+        huge: (
+            hg: (
+                font-size: 54px,
+                line-height: 63px
+            )
+        ),
+        x-huge: (
+            hg: (
+                font-size: 63px,
+                line-height: 63px
+            )
+        ),
+        xx-huge: (
+            hg: (
+                font-size: 63px,
+                line-height: 63px
+            )
+        ),
+        grand: (
+            hg: (
+                font-size: 84px,
+                line-height: 84px
+            )
+        )
+    )
+);

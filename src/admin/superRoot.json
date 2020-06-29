@@ -1,0 +1,182 @@
+{
+    "__super": {
+        "phones": {
+            "data": [
+                {
+                "number": "+7 (495) 925-12-11"
+                },
+                {
+                "number": "+7 (926) 759-56-56"
+                },
+                {
+                "number": "+7 (495) 759-66-66"
+                }             
+            ] 
+        },
+        "footer": {
+            "data": {
+                "number": "+7 (495) 925-12-11"
+            }
+        },
+        "slogan": {
+            "data": "Мы возьмем заботу о<br> Вашей красоте в свои руки",
+            "type": "text"
+        },
+        "contacts": {
+            "data": {
+                "adress": "Пятницкое шоссе, д.9",
+                "location": "Схема проезда"
+            }
+        },
+        "copyright": {
+            "data": {
+                "main": "&copy; 2008-2016 Остров красоты «Симада».",
+                "sub": "Все права защищены."
+            }
+        },
+        "favicon": {
+            "data": {
+                "path": "./favicon/",
+                "png": "fav_64.png",
+                "iso": "fav.ico",
+                "ios": ["57", "72", "114", "144", "180"]
+            },
+            "admin": false
+        },
+        "servicesMenu": {
+            "items": {
+                "data": [
+                    {
+                        "name": "Парикмахерские услуги",
+                        "link": "/services/hairdressing",
+                        "submenu": [
+                            {
+                                "name": "Женские стрижки",
+                                "link": "/services/hairdressing/woman"
+                            },
+                            {
+                                "name": "Мужские стрижки",
+                                "link": "/services/hairdressing/man"
+                            },
+                            {
+                                "name": "Укладка",
+                                "link": "/services/hairdressing/laying"
+                            },
+                            {
+                                "name": "Окрашивание",
+                                "link": "/services/hairdressing/coloring"
+                            },
+                            {
+                                "name": "Химия",
+                                "link": "/services/hairdressing/chemistry"
+                            },
+                            {
+                                "name": "Наращивание волос",
+                                "link": "/services/hairdressing/escalating"
+                            },
+                            {
+                                "name": "Brazilian Blowout, Elumen",
+                                "link": "/services/hairdressing/brazilian"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Ногтевой сервис",
+                        "link": "/services/nail",
+                        "submenu": [
+                            {
+                                "name": "Женский маникюр",
+                                "link": "/services/nail/women-manicure"
+                            },
+                            {
+                                "name": "Женский педикюр",
+                                "link": "/services/nail/women-pedicure"
+                            },
+                            {
+                                "name": "Мужской маникюр",
+                                "link": "/services/nail/men-manicure"
+                            },
+                            {
+                                "name": "Мужской педикюр",
+                                "link": "/services/nail/men-pedicure"
+                            },
+                            {
+                                "name": "Наращивание ногтей",
+                                "link": "/services/nail/escalating"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Косметология",
+                        "link": "/services/cosmetology",
+                        "submenu": [
+                            {
+                                "name": "Чистка и уход",
+                                "link": "/services/cosmetology/cleaning"
+                            },
+                            {
+                                "name": "Эпиляция",
+                                "link": "/services/cosmetology/epilation"
+                            },
+                            {
+                                "name": "Пилинги",
+                                "link": "/services/cosmetology/peelings"
+                            },
+                            {
+                                "name": "Моделирование",
+                                "link": "/services/cosmetology/modeling"
+                            },
+                            {
+                                "name": "Комплексное моделирование",
+                                "link": "/services/cosmetology/complex-modeling"
+                            },
+                            {
+                                "name": "Эндосфера терапия",
+                                "link": "/services/cosmetology/endosphere"
+                            },
+                            {
+                                "name": "Face Lab Термолифтинг",
+                                "link": "/services/cosmetology/facelab-thermo"
+                            },
+                            {
+                                "name": "Face Lab RF-лифтинг",
+                                "link": "/services/cosmetology/facelab-rf"
+                            },
+                            {
+                                "name": "Face Lab пилинг",
+                                "link": "/services/cosmetology/facelab-piling"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Визаж",
+                        "link": "/services/make"
+                    },
+                    {
+                        "name": "Массаж",
+                        "link": "/services/massage",
+                        "submenu": [
+                            {
+                                "name": "Коррекция фигуры",
+                                "link": "/services/massage/correction"
+                            },
+                            {
+                                "name": "Ингибитор",
+                                "link": "/services/massage/ingibitor"
+                            }
+                        ]    
+                    },
+                    {
+                        "name": "Солярий",
+                        "link": "/services/solarium"
+                    },
+                    {
+                        "name": "Акции и скидки",
+                        "link": "/sale",
+                        "icon": "/icon/heart.svg"
+                    }
+                ]
+            }
+        }
+    }
+}

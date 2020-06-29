@@ -1,0 +1,217 @@
+{
+    "__root": {
+        "page_title": {
+            "data": "Моделирование",
+            "type": "text"
+        }
+    },
+    "__modules": {
+        "offer_services": {
+            "image": {
+                "data": {
+                  "base": "/images/",
+                  "file": "sacura.png",
+                  "alt": "Сакура"
+                }
+            },
+            "title": {
+                "data": "<span class='offer-services__title-text offer-services__title-text_red'>Моделирование</span>"
+            },
+            "description": {
+                "data": "Остров красоты «Симада» предлагает широкий ассортимент услуг для всей семьи. Для нас имеет значение мнение каждого клиента и собственная репутация, поэтому мы стремимся всегда поддерживать качество услуг на самом высоком уровне!"
+            },
+            "btn": {
+                "data": {
+                    "name": "Записаться",
+                    "link": "#"
+                }
+            }
+        },
+        "footer": {
+            "json": "modules/footer.json"
+        },
+        "tables": [
+            {
+                "title": {
+                    "data": "Мезотерапия"
+                },
+                "align": "between",
+                "rows": {
+                    "data": [
+                        {
+                            "cols": [
+                                "Наименование",
+                                "цена, руб"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "NCTF 135+0,025 ГК",
+                                "6200"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "NCTF 135 HA+5 ГК",
+                                "10000"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "NCTF 135 HA+10 ГК",
+                                "11300"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "F-acn",
+                                "3500"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "F-vitamin complex (B) ",
+                                "3500"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "F-vitamin A,C,E.",
+                                "3500"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "title": {
+                    "data": "Биоревитализация"
+                },
+                "align": "between",
+                "rows": {
+                    "data": [
+                        {
+                            "cols": [
+                                "Наименование",
+                                "цена, руб"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Yuvederm Hydrate - 1 мл",
+                                "13500"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Glytone professional 1 - 1 мл",
+                                "13000"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Skin B -5 мл",
+                                "6200"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Skin OX -5 мл",
+                                "6200"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Skin colin  -5 мл",
+                                "6200"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Beautypharma Hual ГК 3% - 2 мл ",
+                                "4500"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Beautypharma Hual  amin ГК 2% - 2 мл",
+                                "4000"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "title": {
+                    "data": "Контурная пластика"
+                },
+                "align": "between",
+                "rows": {
+                    "data": [
+                        {
+                            "cols": [
+                                "Наименование",
+                                "цена, руб"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Surgiderm 18 – 0,8 мл",
+                                "12800"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Surgiderm 24 XP – 0,8 мл",
+                                "16350"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Surgiderm 30  – 0,8 мл",
+                                "16350"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Surgiderm 30 XP – 0,8 мл",
+                                "18000"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Yuvederm Ultra Smile - 0,55 мл",
+                                "12500"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Stilage Lips - 1мл",
+                                "21900"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Glytone professional  2 - 1 мл",
+                                "17800"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Glytone professional  3 - 1 мл",
+                                "18300"
+                            ]
+                        },
+                        {
+                            "cols": [
+                                "Glytone professional  4 - 1 мл",
+                                "18600"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]                
+    },
+    "__scripts": []
+}

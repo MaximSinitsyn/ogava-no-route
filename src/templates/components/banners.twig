@@ -1,0 +1,43 @@
+<div class='row xs-center'>
+    {% for banner in __scope.banners %}
+    {% set col_class = "" %}
+    {% for class in banner.size %}
+        {% set col_class = col_class ~ class.class ~ "-" ~ class.size ~ " " %}
+    {% endfor %}
+        <div class='col {{col_class}}'>
+            <div class='banner banner_{{banner.color}} banner_{{banner.align}}'>
+                <div class='rectangle-image banner__rectangle'>
+                    <div class='banner__content'>
+                        <div class='banner__title'>
+                            {{ banner.title | raw }}
+                        </div>
+                        {% if banner.description != null %}
+                            <div class='banner__description'>
+                                {{ banner.description }}
+                            </div>
+                        {% endif %}
+                        {% set color_btn = "" %}
+                        {% if banner.class_color_btn != null %}
+                            {% set color_btn = "btn_" ~ banner.class_color_btn %}
+                        {% endif %}
+                        <a class='banner__btn btn btn_big {{color_btn}}' href='{{ banner.btn.link }}'>
+                            {{ banner.btn.name }}
+                        </a>
+                    </div>
+                    <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_light rectangle-image__border_top'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-w rectangle-image__border_light rectangle-image__border_right'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-w rectangle-image__border_light rectangle-image__border_left'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_light rectangle-image__border_overlay rectangle-image__border_bottom'></div>
+                    {% if banner.image != null %}
+                    {% set class_full_height = "rectangle-image__picture banner__picture" %}
+                    {% if banner.full_height != null %}
+                        {% set class_full_height = class_full_height ~ " banner__picture_full-height" %}
+                    {% endif %}
+                        {% include "utils/image.twig" with { "__scope": banner.image , "__class": class_full_height } %}
+                    }
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

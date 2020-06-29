@@ -1,0 +1,162 @@
+.banner {
+    background: $purple;
+    padding: 42px;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+
+    &_pink { 
+        background: $pink;
+    }
+
+    &_yellow {
+        background: $light;
+    }
+
+    &_purple {
+        background: $purple;
+    }
+
+    &_red {
+        background: $assertive;
+    }
+
+    &_center {
+        align-items: center;
+        text-align: center;
+    }
+
+    &_right {
+        align-items: right;
+    }
+
+    &_left {
+        align-items: left;
+    }
+
+    &__rectangle {
+        align-items: flex-end;
+    }
+
+    &_left &__rectangle {
+        justify-content: flex-start;
+    }
+
+    &_right &__rectangle {
+        justify-content: flex-end;
+    }
+
+    &__picture {
+        width: auto;
+        height: 100%;
+        bottom: -#{$offset_m};
+
+        &_full-height {
+            height: calc(100% + #{$offset_m * 2});
+        }
+    }
+
+    &_left &__picture {
+        right: 0;
+
+        &_full-height {
+            right: $size;
+        }
+    }
+
+    &_right &__picture {
+        left: 0;
+
+        &_full-height {
+            left: $size;
+        }
+    }
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        padding: $offset_l #{$offset_m + $size / 2};
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &_left &__content {
+        align-items: flex-start;
+    }
+
+    &_right &__content {
+        align-items: flex-end;
+    }
+
+    &__title {
+        @include responsive (( fonts: x-large ));
+
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: $dark-brown;
+    }
+
+    &_left &__title {
+        max-width: 70%;
+        text-align: left;
+    }
+
+    &_right &__title {
+        max-width: 70%;
+        text-align: right;
+    }
+
+    &__description {
+        text-align: center;
+        font-weight: 300;
+        padding: $offset_s 0;
+        border-top: 1px solid $gray-brown;
+        margin-top: $offset_s;
+    }
+
+    &_left &__description {
+        text-align: left;
+    }
+
+    &_right &__description {
+        text-align: right;
+    }
+
+    &__btn {
+        margin-top: $offset_s;
+    }
+
+    // &__main {}
+
+    &__sub {
+        @include responsive (( fonts: x-medium ));
+
+        text-transform: none;
+        font-weight: 300;
+        border-top: 1px solid $dark-brown;
+        margin-top: $offset_s;
+        padding-top: $offset_s;
+    }
+
+    &_left &__sub {
+        text-align: left;
+    }
+
+    &_right &__sub {
+        text-align: right;
+    }
+}
+
+.lg-8 .banner__content,
+.lg-9 .banner__content,
+.lg-10 .banner__content,
+.lg-11 .banner__content,
+.lg-12 .banner__content {
+    max-width: 60%;
+}
+

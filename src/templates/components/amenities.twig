@@ -1,0 +1,29 @@
+<div class='row amenitie'>
+    {% for amenitie in __scope.amenities %}
+        <div class='col xs-6'>
+            <div class='amenitie__container'>
+                <div class='rectangle-image amenitie__rectangle'>
+                    <div class='amenitie__content'>
+                        <div class='amenitie__title'>
+                            {{ amenitie.title }}
+                        </div>
+                        <div class='amenitie__description'>
+                            {{ amenitie.description }}
+                        </div>
+                        <div class='amenitie__price'>
+                            {{ amenitie.price }}
+                        </div>
+                        <a class='amenitie__btn btn' href='{{ amenitie.btn.link }}'>
+                            {{ amenitie.btn.name }}
+                        </a>
+                    </div>
+                    {% include 'utils/image.twig' with {'__scope': amenitie.image, '__class': 'amenitie__img'} %}
+                    <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_yellow rectangle-image__border_top'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-w rectangle-image__border_yellow rectangle-image__border_right'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-w rectangle-image__border_yellow rectangle-image__border_left'></div>
+                    <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_yellow rectangle-image__border_overlay rectangle-image__border_bottom'></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

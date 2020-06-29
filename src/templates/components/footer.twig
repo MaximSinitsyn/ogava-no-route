@@ -1,0 +1,89 @@
+<div class='row'>
+    <div class='footer'>
+        <div class='row'>
+            <div class='col xs-11 xs-l-1 footer__container rectangle-image'>
+                <div class='footer__content'>
+                    <div class='footer__left'>
+                        <div class='footer__logo'>
+                            <div class='footer__logo-inner'>
+                                {% include 'components/logo.twig' %}
+                                <div class='footer__logo-text'>
+                                    {{ footer.time_work | raw }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class='footer__menu'>
+                            <div class='footer__menu-title'>
+                                {{ footer.title_1 }}
+                            </div>
+                            {% for item in __scope.items_1 %}
+                                <li class='footer__menu-item'>
+                                    <a class='menu__link footer__menu-link' href="{{ item.link }}">
+                                        {{ item.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </div>
+                        <div class='footer__menu'>
+                            <div class='footer__menu-title'>
+                                {{ footer.title_2 }}
+                            </div>
+                            {% for item in __scope.items_2 %}
+                                <li class='footer__menu-item'>
+                                    <a class='menu__link footer__menu-link' href="{{ item.link }}">
+                                        {{ item.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class='footer__right'>
+                        <div class='footer__phone'>
+                            <div class='footer__phone-content'>
+                                <div class='footer__phone-text'>
+                                <div class='footer__phone-title'>
+                                    {{ footer.phone.title }}
+                                </div>
+                                <a class='footer__phone-number' href='tel://{{__super.footer.number}}'>
+                                    {{ __super.footer.number }}
+                                </a>
+                                </div>
+                                <img class='footer__phone-img' src='/icon/gift.svg'>
+                            </div>
+                            <div class='footer__inst'>
+                                {% include 'utils/image.twig' with {'__scope': footer.image_inst, '__class': 'footer__inst-img' } %}
+                                <div class='footer__inst-btn'>
+                                    <a class='footer__inst-link btn' href='{{ footer.btn.link }}'>
+                                        {{ footer.btn.name }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class='rectangle-image__border rectangle-image__border_yellow rectangle-image__border_top'></div>
+                <div class='rectangle-image__border rectangle-image__border_yellow rectangle-image__border_right'></div>
+                <div class='rectangle-image__border rectangle-image__border_yellow rectangle-image__border_left'></div>
+                <div class='rectangle-image__border rectangle-image__border_yellow rectangle-image__border_overlay rectangle-image__border_bottom'></div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col xs-11 xs-l-1'>
+                <div class='footer__low'>
+                    <div class='footer__low-left'>
+                        <span class='footer__low-text'>
+                            {{ __super.copyright.main | raw }}
+                        </span>
+                        <span class='footer__low-text'>
+                            {{ __super.copyright.sub }}
+                        </span>
+                    </div>
+                    <div class='footer__low-right'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

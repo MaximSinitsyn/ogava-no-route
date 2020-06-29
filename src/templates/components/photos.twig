@@ -1,0 +1,25 @@
+<div class='row'>
+    <div class='photos'>
+        <div class='row'>
+            <div class='col xs-12 xs-center'>
+                <div class='photos__title'>
+                    {{ __scope.title }}
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            {% for photo in __scope.photos %}
+                <div class='col xs-4'>
+                    {% include "utils/image.twig" with { "__scope": photo.image , "__class": "photos__image" } %}
+                </div>
+            {% endfor %}
+        </div>
+        <!--div class='row'>
+            <div class='col xs-12 xs-center'>
+                <div class='photos__btn btn btn_big btn_solid' href='{{ advantage.btn.link }}'>
+                    {{ photos.btn.name }}
+                </div>
+            </div>
+        </div-->
+    </div>
+</div>

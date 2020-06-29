@@ -1,0 +1,45 @@
+<ul class='menu'>
+    {% for item in __scope.items %}
+        <li class='menu__item'>
+            {% set active_menuitem = '' %}
+
+            {% if item.link in __system.uri %}
+                {% set active_menuitem = 'menu__link_active' %}
+            {% endif %}
+
+            {% if item.icon is defined %}
+                <a class='menu__link menu__link_icon {{ active_menuitem }}' href='{{ item.link }}'>
+                    <div class='menu__link-label'>
+                        {{ item.name }}
+                    </div>
+                    <img class='menu__link-icon' src='{{ item.icon }}'>
+                </a>
+            {% else %}
+                <a class='menu__link {{ active_menuitem }}' href='{{ item.link }}'>
+                    {{ item.name }}
+                </a>
+            {% endif %}
+
+            {% if item.submenu is defined %}
+                <img class='menu__subMenuArrow' src='/icon/down-arrow.svg'>
+
+                <ul class='menu__subMenu'>
+                    {% for subitem in item.submenu %}
+                        <li class='menu__subMenu-item'>
+                            {% set active_submenuitem = '' %}
+
+                            {% if subitem.link in __system.uri %}
+                                {% set active_submenuitem = 'menu__link_active' %}
+                            {% endif %}
+
+                            <a class='menu__link {{ active_submenuitem }}' href='{{ subitem.link }}'>
+                                {{ subitem.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
+        </li>
+    {% endfor %}
+</ul>

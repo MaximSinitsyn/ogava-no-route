@@ -1,0 +1,32 @@
+.headline {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_h1 {}
+
+    &__main {
+        @include responsive (( fonts: xx-huge ));
+        color: $assertive;
+        text-transform: uppercase;
+    }
+
+    &__sub {
+        @include responsive (( fonts: huge ));
+        font-weight: 100;
+        color: $balanced;
+        text-transform: uppercase;
+    }
+
+    &_overlay &__main,
+    &_overlay &__sub {
+        background: $white;
+    }
+
+    &_overlay &__main {
+        padding: $offset_s 0;
+    }
+
+    &_overlay &__sub {
+        padding: 0 0 $offset_s;
+    }
+}

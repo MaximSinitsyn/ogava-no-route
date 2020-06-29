@@ -1,0 +1,19 @@
+.photos {
+    &__title {
+        font-size: $offset_m;
+        line-height: $offset_m;
+        padding-bottom: $offset_m;
+        text-transform: uppercase;
+        color: $dark-brown;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__btn {
+        padding: $offset_s $offset_h;
+        margin-top: $offset_s;
+    }
+}

@@ -1,0 +1,135 @@
+.header {
+    background: linear-gradient(-180deg, rgba(255,255,255,0.80) 0%, rgba(255,255,255,0.00) 100%);
+    position: relative;
+    z-index: 200;
+
+    &__container {
+        align-items: center;
+    }
+
+    // &__left {}
+
+    &__logo {
+        height: $offset_m;
+    }
+
+    &__slogan {
+        // @include responsive (( fonts: x-medium ));
+
+        display: flex;
+        align-items: center;
+        color: $gray-brown;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-left: $offset_s;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    &__right {
+        justify-content: flex-end;
+        z-index: 2;
+        align-items: center;
+    }
+
+    &__menu {
+        &_between {
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__menu-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px dashed $light-grey;
+        padding-top: $offset_xs;
+    }
+
+    &__menu-inner {
+        width: 55%;
+
+        &_wide {
+            flex: 0 1 80%;
+        }
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: column;
+        color: $balanced;
+    }
+
+    &__location-item {
+        text-align: right;
+    }
+
+    &__address {
+        font-weight: bold;
+        color: $gray-brown;
+    }
+
+    &__link {
+        color: $gray-brown;
+        font-weight: bold;
+
+        &_slim {
+            font-weight: 300;
+            text-align: right;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                border-bottom: 1px dashed $gray-brown;
+                display: block;
+                margin-top: -1px;
+            }
+            
+            &:hover::after {
+                border-bottom: 1px solid $gray-brown;
+            }
+        }
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        color: $gray-brown;
+        padding-left: $offset_s;
+        margin-left: $offset_s;
+        border-left: 1px dashed $gray-brown;
+    }
+
+    &__btn {
+        min-width: 200px;
+        margin-left: $offset_s;
+    }
+
+    // &__btn-link {}
+
+    &__burger {
+        margin-left: $offset_s;
+        display: flex;
+        background: rgba(83,67,52,0.60);
+        align-items: center;
+        padding: $offset_xs;
+
+        &_light {
+            background: $white;
+            padding: 0;
+        }
+    }
+
+    &__burger-text {
+        color: $white;
+        @include responsive (( fonts: small ));
+        text-transform: uppercase;
+        padding-left: $offset_xs;
+        font-weight: 300;
+
+        &_gray-brown {
+            color: $gray-brown;
+        }
+    }
+}

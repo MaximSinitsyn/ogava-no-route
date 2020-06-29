@@ -1,0 +1,72 @@
+.rectangle-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_banner-big {
+        max-width: 1000px;
+        min-height: 460px;
+    }
+
+    &__border {
+        position: absolute;
+        background: $light;
+
+        &_top {
+            top: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+
+        &_left {
+            left: 0;
+        }
+
+        &_bottom {
+            bottom: 0;
+        }
+
+        &_top,
+        &_bottom {
+            height: $offset_s;
+            width: 100%;
+        }
+
+        &_right,
+        &_left {
+            height: 100%;
+            width: $offset_s;
+        }
+
+        &_overlay {
+            z-index: 2;
+        }
+
+        &_small-h {
+            height: $offset_xs;
+        }
+
+        &_small-w {
+            width: $offset_xs;
+        }
+
+        &_light {
+            background: $white;
+        }
+
+        &_yellow {
+            background: $light;
+        }
+    }
+
+    &__picture {
+        width: 120%;
+        position: absolute;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,56 @@
+.amenitie {
+    margin-top: $size_h;
+
+    &__container {
+        padding-bottom: $offset_h;
+        margin-right: $offset_s;
+
+    }
+
+    // &__rectangle {}
+
+    &__content {
+        padding: $offset_l;
+    }
+
+    &__title {
+        @include responsive (( fonts: large ));
+
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        background: $white;
+        font-weight: bold;
+        color: $gray-brown;
+        padding: 0 $offset_s;
+        margin-top: -$offset_s;
+        margin-left: -$offset_s;
+    }
+
+    &__description {
+        color: $gray-brown;
+        font-weight: 300;
+    }
+
+    &__price {
+        @include responsive (( fonts: x-large ));
+
+        font-weight: bold;
+        color: $gray-brown;
+        padding: $offset_m 0;
+    }
+
+    &__btn {
+        max-width: 205px;
+    }
+
+    &__img {
+        position: absolute;
+        max-width: 286px;
+        right: 0;
+        bottom: 0;
+        margin-bottom: -$offset_m;
+        margin-right: -$offset_m;
+        z-index: 3;
+    }
+}

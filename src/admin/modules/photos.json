@@ -1,0 +1,40 @@
+{
+    "title": {
+        "data": "Фото салона"
+    },
+    "btn": {
+        "data": {
+            "name": "Все фото",
+            "link": "#" 
+        }
+    },
+    "photos": [
+        {
+            "image": {
+                "data": {
+                    "base": "/images/",
+                    "file": "most.jpg",
+                    "alt": "Салон красоты Симада"
+                }
+            }
+        },
+        {
+            "image": {
+                "data": {
+                    "base": "/images/",
+                    "file": "most.jpg",
+                    "alt": "Салон красоты Симада"
+                }
+            }
+        },
+        {
+            "image": {
+                "data": {
+                    "base": "/images/",
+                    "file": "most.jpg",
+                    "alt": "Салон красоты Симада"
+                }
+            }
+        }
+    ]
+}

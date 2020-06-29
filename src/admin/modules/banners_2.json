@@ -1,0 +1,61 @@
+{
+    "banners": [
+        {
+            "size": {
+                "data": [
+                    {
+                        "class": "xs",
+                        "size": 12
+                    },
+                    {
+                        "class": "sm",
+                        "size": 10
+                    },
+                    {
+                        "class": "md",
+                        "size": 10
+                    },
+                    {
+                        "class": "lg",
+                        "size": 10
+                    },
+                    {
+                        "class": "hg",
+                        "size": 10
+                    }
+                ]
+            },
+            "color": {
+                "data": "pink"
+            },
+            "align": {
+                "data": "left"
+            },
+            "full_height": {
+                "data": true
+            },
+            "class_color_btn": {
+                "data": "light"
+            },
+            "image": {
+              "data": {
+                "base": "/images/",
+                "file": "girl_clean.png",
+                "alt": "Салон красоты Симада"
+              }
+            },
+            "title": {
+                "data": "Широкий спектр услуг"
+            },
+            "description": {
+                "data": "У нас вы можете посвятить себе любимой хоть целый день - стрижки и уход за кожей лица и тела, маникюр и педикюр, солярий и массаж, визаж и прически доступны у нас."
+            },
+            "btn": {
+                "data": {
+                    "name": "Перейти в каталог",
+                    "link": "#" 
+                }
+            }
+        }   
+    ]      
+}

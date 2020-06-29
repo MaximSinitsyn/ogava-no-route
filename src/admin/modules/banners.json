@@ -1,0 +1,99 @@
+{
+    "banners": [ 
+        {
+            "size": {
+                "data": [
+                    {
+                        "class": "xs",
+                        "size": 12
+                    },
+                    {
+                        "class": "sm",
+                        "size": 6
+                    },
+                    {
+                        "class": "md",
+                        "size": 6
+                    },
+                    {
+                        "class": "lg",
+                        "size": 6
+                    },
+                    {
+                        "class": "hg",
+                        "size": 6
+                    }
+                ]
+            },
+            "color": {
+                "data": "purple"
+            },
+            "align": {
+                "data": "left"
+            },
+            "image": {
+              "data": {
+                "base": "/images/",
+                "file": "endosphere.png",
+                "alt": "Салон красоты Симада"
+              }
+            },
+            "title": {
+                "data": "<span class='banner__main'>Эндосфера терапия</span> <span class='banner__sub'>Инновационный метод борьбы с целюлитом</span>"
+            },
+            "btn": {
+                "data": {
+                    "name": "Подробнее",
+                    "link": "/services/cosmetology/endosphere" 
+                }
+            }
+        },
+        {
+            "size": {
+                "data": [
+                    {
+                        "class": "xs",
+                        "size": 12
+                    },
+                    {
+                        "class": "sm",
+                        "size": 6
+                    },
+                    {
+                        "class": "md",
+                        "size": 6
+                    },
+                    {
+                        "class": "lg",
+                        "size": 6
+                    },
+                    {
+                        "class": "hg",
+                        "size": 6
+                    }
+                ]
+            },
+            "color": {
+                "data": "pink"
+            },
+            "align": {
+                "data": "left"
+            },
+            "image": {
+              "data": {
+                "base": "/images/",
+                "file": "plazmaliner.png"
+              }
+            },
+            "title": {
+                "data": "<span class='banner__main'>Плазмалайнер</span> <span class='banner__sub'>Аппарат для омоложения кожи</span>"
+            },
+            "btn": {
+                "data": {
+                    "name": "Подробнее",
+                    "link": "/services/cosmetology/modeling" 
+                }
+            }
+        }
+    ]
+}

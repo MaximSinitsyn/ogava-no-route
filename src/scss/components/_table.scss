@@ -1,0 +1,96 @@
+.tables {
+    display: flex;
+    flex-direction: column;
+}
+
+.table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & + & {
+        margin-top: 120px;
+
+        &::before {
+            content: "";
+            border-top: 1px solid #afa79f;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: -60px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #d1011c;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__services {
+        width: 800px;
+    }
+
+    &__services-col {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px;
+        border-bottom: 1px dashed #84776c;
+        color: #777;
+
+        &_price {
+            font-weight: bold;
+            color: #d2011d;
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        &_label {
+            font-weight: bold;
+            color: #525252;
+
+            p:last-child {
+                font-weight: normal;
+            }
+        }
+
+        &_head {
+            font-weight: bold;
+            white-space: nowrap;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        &_between {
+            &:first-child {
+                text-align: left;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    &__services-row:last-child &__services-col {
+        border-bottom: 0;
+    }
+
+    &__service-post-text {
+        margin-top: 30px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,56 @@
+.offer-services {
+    position: relative;
+    margin-top: $size_h;
+    min-height: 400px;
+    margin-bottom: 120px;
+
+    &__content {
+        flex-direction: column;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title-text {
+        @include responsive (( fonts: x-huge ));
+
+        text-transform: uppercase;
+        color: $gray-brown;
+
+        &_red {
+            color: $assertive;
+        }
+    }
+
+    &__description {
+        @include responsive (( fonts: small ));
+
+        font-weight: 300;
+        color: $dark-brown;
+        padding-top: $offset_m;
+    }
+
+    &__btn {
+        max-width: 300px;
+        padding-top: $offset_l;
+    }
+
+    &__link {
+        @include responsive (( fonts: x-medium ));
+
+        padding: $size_m $offset_s;
+    }
+
+    // &__image {}
+
+    &__picture {
+        width: 70%;
+        transform: rotate(160deg);
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: -160px;
+    }
+}

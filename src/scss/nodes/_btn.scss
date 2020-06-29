@@ -1,0 +1,107 @@
+/// @example html - Простой пример, без использования иконок.
+///
+/// <button class='btn'>Button</button>
+///
+/// @example html - Модификатор изменения размера кнопки на большую - '_big'.
+///                 По умолчанию 'small'
+///
+/// <button class='btn btn_big'>Button</button>
+///
+/// @example html - Модификатор для изменения вида кнопки на прозрачную с обводкой - '_solid'
+///
+/// <button class='btn btn_solid'>Button</button>
+///
+/// @example html - Модификатор для изменения вида кнопки на прозрачную без обводки - '_light'
+///
+/// <button class='btn btn_light'>Button</button>
+
+.btn {
+    @include responsive (( fonts: x-small ));
+    
+    color: $white;
+    background: $assertive;
+    box-shadow: 15px 15px 40px 0 rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: calc(#{$offset_s} / 2) $offset_s;
+    transition: 300ms 0ms linear;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: mix(black, $assertive, 10%);
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        background: mix(black, $assertive, 20%);
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &_big {
+        @include responsive (( fonts: x-medium ));
+        padding: $offset_s $size_h;
+    }
+
+    &_solid {
+        border: 3px solid $balanced;
+        //padding: $size - 3 #{$size / 2 + $size - 3};
+        background: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        color: $balanced;
+        font-weight: normal;
+
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: none;
+        }
+
+        &:active {
+            background: mix(black, $white, 20%);
+        }
+
+        &:focus {
+            box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    &_light {
+        //padding: $size - 3 #{$size / 2 + $size - 3};  -??
+        background: $white;
+        box-shadow: none;
+        color: $dark-brown;
+        font-weight: 300;
+
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: none;
+        }
+
+        &:active {
+            background: mix(black, $white, 20%);
+        }
+
+        &:focus {
+            box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    // &_icon {}
+
+    &__icon {
+        max-width: 30px;
+        margin-left: $offset_s;
+    }
+
+    &__caption-wrapper {
+        padding-right: $offset_s;
+    }
+
+    &__caption {
+        padding-left: $offset_s;
+        white-space: nowrap;
+    }
+}

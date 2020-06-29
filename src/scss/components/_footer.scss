@@ -1,0 +1,150 @@
+.footer {
+    position: relative;
+    width: 100%;
+    margin-top: $offset_m;
+
+    &__container {
+        position: relative;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: $offset_m;
+        padding: $offset_l $offset_m;
+    }
+
+    &__left {
+        display: flex;
+        margin-left: -$size * 6;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;   
+    }
+
+    &__logo-inner {
+        padding: $offset_s 0;
+        background: $white;
+    }
+
+    &__logo-text {
+        @include responsive (( fonts: x-medium ));
+
+        color: $balanced;
+        font-weight: 300;
+        padding-top: $offset_s;
+    }
+
+    &__menu {
+        @include responsive (( fonts: medium ));
+
+        display: flex;
+        flex-direction: column;
+        padding-left: $offset_h;
+
+        &:last-child {
+            padding-left: $offset_s;
+        }
+    }
+
+    &__menu-title {
+        padding-bottom: $offset_m;
+        color: $gray-brown;
+    }
+
+    &__menu-item {
+        display: inline-block;
+    }
+
+    &__menu-link {
+        display: inline-block;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    // &__phone {}
+
+    &__phone-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: $offset_m;
+    }
+
+    &__phone-text {
+        display: flex;
+        flex-direction: column;
+        padding-right: $offset_s;
+    }
+
+    &__phone-title {
+        @include responsive (( fonts: x-medium ));
+
+        color: $light-grey;
+        text-transform: uppercase;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    &__phone-number {
+        @include responsive (( fonts: large ));
+
+        color: $dark-brown;
+        text-align: right;
+        font-weight: 600;
+    }
+
+    &__phone-img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    &__inst {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+     }
+
+    &__inst-img {
+        max-width: 150px;
+        margin-right: $offset_s;
+     }
+
+    &__inst-btn {
+        min-width: 224px;
+    }
+
+    // &__inst-link {}
+
+    &__low {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: $offset_s;
+    }
+
+    &__low-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // &__low-right {}
+
+    &__low-text {
+        @include responsive (( fonts: medium ));
+
+        color: $balanced;
+        font-weight: 300;
+    }
+
+    &__low-img {
+        max-width: $offset_s;
+     }
+}

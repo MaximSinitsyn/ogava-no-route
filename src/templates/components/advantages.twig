@@ -1,0 +1,39 @@
+<div class='row advantage'>
+    <div class='row'>
+        <div class='col xs-12 xs-center'>
+            <div class='advantage__title'>
+                {{ __scope.advantages_title }}
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        {% for advantage in __scope.advantages %}
+        {% set col_class = "" %}
+        {% for class in advantage.size %}
+            {% set col_class = col_class ~ class.class ~ "-" ~ class.size ~ " " %}
+        {% endfor %}
+            <div class='col {{col_class}}'>
+                <div class='advantage__container'>
+                    <div class='rectangle-image advantage__rectangle'>
+                        <img class='advantage__img' src='{{ advantage.image.base }}{{ advantage.image.file }}'>
+                        <div class='advantage__content'>
+                            <div class='advantage__main'>
+                                {{ advantage.main }}
+                            </div>
+                            <div class='advantage__description'>
+                                {{ advantage.description }}
+                            </div>
+                            <a class='advantage__btn btn btn_solid' href='{{ advantage.btn.link }}'>
+                                {{ advantage.btn.name }}
+                            </a>
+                        </div>
+                        <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_yellow rectangle-image__border_top'></div>
+                        <div class='rectangle-image__border rectangle-image__border_small-w rectangle-image__border_yellow rectangle-image__border_right'></div>
+                        <div class='rectangle-image__border rectangle-image__border_small-w rectangle-image__border_yellow rectangle-image__border_left'></div>
+                        <div class='rectangle-image__border rectangle-image__border_small-h rectangle-image__border_yellow rectangle-image__border_overlay rectangle-image__border_bottom'></div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

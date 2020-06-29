@@ -1,0 +1,18 @@
+<div class='row offer-services'>
+    <div class='col xs-7 xs-start offer-services__content'>
+        <div class='offer-services__title'>
+            {{ offer_services.title | raw }}
+        </div>
+        <div class='offer-services__description'>
+            {{ offer_services.description }}
+        </div>
+        <button class='offer-services__btn'>
+            <a class='offer-services__link btn btn_solid' href='{{ offer_services.btn.link }}'>
+                {{ offer_services.btn.name }}
+            </a>
+        </button>
+    </div>
+    <div class='offer-services__image'>
+        {% include "utils/image.twig" with { "__scope": offer_services.image, "__class": "offer-services__picture" } %}
+    </div>
+</div>

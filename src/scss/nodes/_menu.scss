@@ -1,0 +1,90 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            z-index: 2;
+        }
+    }
+
+    &__item + &__item {
+        margin-left: 16px;
+    }
+
+    &__link {
+        position: relative;
+        z-index: 1;
+        color: $balanced;
+        font-weight: 300;
+        white-space: nowrap;
+        border-bottom: 1px dashed $balanced;
+
+        &:hover {
+            border-bottom: 1px solid $balanced;
+        }
+
+        &_active {
+            font-weight: bold;
+        }
+
+        &_icon {
+            display: flex;
+            border-bottom: 0;
+
+            &:hover {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &__link-icon {
+        max-width: $offset_s;
+        max-height: $offset_s;
+        margin-left: $size_s;
+    }
+
+    &__link-label {
+        font-weight: bold;
+        color: $assertive;
+        border-bottom: 1px dashed transparent;
+    }
+
+    &__link_active &__link-label {
+        border-bottom: 1px solid $assertive;
+    }
+
+    &__link:hover &__link-label {
+        border-bottom: 1px dashed $assertive;
+    }
+
+    &__subMenuArrow {
+        position: relative;
+        z-index: 2;
+        width: 12px;
+        margin-left: 6px;
+    }
+
+    &__subMenu {
+        position: absolute;
+        background: #fff;
+        padding: 40px 20px 20px;
+        top: -10px;
+        left: -20px;
+        min-width: 100%;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+        z-index: 0;
+        visibility: hidden;
+        opacity: 1;
+    }
+
+    &__item:hover &__subMenu {
+        opacity: 1;
+        visibility: visible;
+    }
+}

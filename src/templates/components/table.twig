@@ -1,0 +1,60 @@
+<div class='table'>
+    {% if __scope.title is defined %}
+        <div class='table__title'>
+            {{ __scope.title | raw }}
+        </div>
+    {% endif %}
+    {% if __scope.description is defined %}
+        <div class='table__description'>
+            {{ __scope.description | raw }}
+        </div>
+    {% endif %}
+    {% if __scope.rows is defined %}
+        <table class='table__services'>
+            {% for row in __scope.rows %}
+                {% set col_title = '' %}
+                {% if loop.first %}
+                    {% set col_title = 'table__services-col_head' %}
+                {% endif %}
+
+                {% set align = '' %}
+                {% if __scope.align is defined %}
+                    {% set align = 'table__services-col_between' %}
+                {% endif %}
+        
+                <tr class='table__services-row'>
+                    {% for col in row.cols %}
+
+                        {% set col_price = '' %}
+                        {% if loop.last %}
+                            {% set col_price = 'table__services-col_price' %}
+                        {% endif %}
+
+                        {% set col_label = '' %}
+                        {% if loop.first %}
+                            {% set col_label = 'table__services-col_label' %}
+                        {% endif %}
+
+                        <td class='table__services-col {{col_title}} {{align}} {{col_price}} {{col_label}}'>
+                            {% if col[1] %}
+                                <p style='font-weight: bold; margin-bottom: 10px;'>
+                                    {{ col[0] | raw }}
+                                </p>
+                                <p style='color: #6d6d6d;'>
+                                    {{ col[1] | raw  }}
+                                </p>
+                            {% else %}
+                                {{ col | raw  }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    {% if __scope.post_text is defined %}
+        <div class='table__service-post-text'>
+            {{ __scope.post_text | raw }}
+        </div>
+    {% endif %}
+</div>

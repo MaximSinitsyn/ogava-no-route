@@ -1,0 +1,88 @@
+
+@function responsive($array, $new-array, $__array-params: false, $root: false) {
+    $__array: $new-array;
+
+    @each $breakpoint in map-keys($breakpoints) {
+        @each $prop in map-keys($array) {
+            $prop-array: map-get($array, $prop);
+            $prop-params: ();
+
+            @if type_of($prop-array) == string {
+                @if $__array-params != false {
+                    $prop-params: map-get(map-get($__array-params, $prop), $prop-array);
+                } @else {
+                    $prop-params: map-get(map-get($variables, offset), $prop-array);
+                }
+
+                @each $point in map-keys($prop-params) {
+                    @if $breakpoint == $point {
+                        $point-params: map-get($prop-params, $point);
+
+                        @if map_has_key($__array, $point) {
+                            @if $root == offset {
+                                $add-to-array: map_merge(map-get($__array, $point), (#{$prop}: $point-params));
+                                $__array: map_merge($__array, (#{$point}: $add-to-array));
+                            } @else {
+                                $add-to-array: map_merge(map-get($__array, $point), $point-params);
+                                $__array: map_merge($__array, (#{$point}: $add-to-array));
+                            }
+                        } @else {
+                            @if $root == offset {
+                                $__array: map_merge($__array, (#{$point}: (#{$prop}: $point-params)));
+                            } @else {
+                                $__array: map_merge($__array, (#{$point}: $point-params));
+                            }
+                        }
+
+                    }
+                }
+            }
+            @else {
+                $inner-array: map_merge($__array, responsive($prop-array, $__array, $root: #{$prop}));
+                $new-arr: ();
+
+                @debug $inner-array;
+
+                @if length($__array) > 0 {
+                    @each $key in map-keys($__array) {
+                        @if map_has_key($inner-array, $key)  {
+                            @if type_of(map-get($__array, $key)) == map {
+                                $new-arr: map_merge($new-arr, map_merge(map-get($__array, $key), map-get($inner-array, $key)));
+                                $__array: map_merge($__array, (#{$key}: $new-arr));
+                            }
+                        }
+                    }
+                } @else {
+                    $new-arr: map_merge($new-arr, map_merge($__array, $inner-array));
+                    $__array: $new-arr;
+                }
+            }
+        }
+    }
+
+    @return $__array;
+}
+
+@mixin responsive($array) {
+    $__return: ();
+    $__array: ();
+
+    $__array: map-merge($__array, responsive($array, (), $variables));
+
+    @each $breakpoint in map-keys($breakpoints) {
+
+        $array-params: map_get($__array, $breakpoint);
+
+        @if $breakpoint != xs {
+            @media (map-get($breakpoints, $breakpoint)) {
+                @each $val, $key in $array-params {
+                    #{$val}: #{$key};
+                }
+            }
+        } @else {
+            @each $val, $key in $array-params {
+                #{$val}: #{$key};
+            }
+        }
+    }
+}

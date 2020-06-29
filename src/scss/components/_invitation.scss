@@ -1,0 +1,55 @@
+.invitation {
+    display: flex;
+
+    &__container {
+        background: $lilac;
+        padding: $offset_m;
+        width: 100%;
+    }
+
+    &__rectangle {
+        padding: $offset_h;
+    }
+
+    &__content {
+        text-align: center;
+        z-index: 2;
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: $offset_l;
+        line-height: $offset_l;
+        color: $white;
+        padding-bottom: $offset_m;
+        margin-bottom: $offset_m;
+        border-bottom: 1px solid $white;
+    }
+
+    &__description {
+        font-size: $offset_s;
+        line-height: $offset_s;
+        font-weight: 300;
+        padding-bottom: $offset_m;
+        color: $white;
+    }
+
+    &__btn {
+        display: inline-block;
+    }
+
+    &__image {
+        position: absolute;
+        height: 100%;
+        width: 114%;
+        z-index: 1;
+        margin-top: $offset_m;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: $offset_m;
+    }
+}
